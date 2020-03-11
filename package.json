@@ -6,7 +6,8 @@
     "author": "Boni García",
     "scripts": {
         "rest": "node rest.js",
-        "firestore": "node firestore.js"
+        "firestore": "node firestore.js",
+        "firestore-aa": "node firestore_async_await.js"
     },
     "dependencies": {
         "request": "^2.88.2",
