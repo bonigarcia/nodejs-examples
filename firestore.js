@@ -11,7 +11,7 @@ const db = admin.firestore();
 // 1. Add data
 // https://firebase.google.com/docs/firestore/manage-data/add-data
 
-// 1a. Add a new document with a generated id.
+// 1a. Add a new document with a generated id
 let tokyo = {
     name: "Tokyo",
     country: "Japan"
@@ -42,8 +42,7 @@ let setDoc = db.collection("cities").doc("LA").set(losAngeles).then(() => {
     }).then(() => {
         // 4. Read data
         // https://firebase.google.com/docs/firestore/query-data/get-data
-        let citiesRef = db.collection("cities");
-        let allCities = citiesRef.get()
+        let allCities = db.collection("cities").get()
             .then(snapshot => {
                 snapshot.forEach(doc => {
                     console.log(doc.id, "=>", doc.data());
