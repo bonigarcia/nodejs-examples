@@ -5,11 +5,14 @@
     "license": "Apache Version 2.0",
     "author": "Boni García",
     "scripts": {
-        "rest": "node rest.js"
+        "rest": "node rest.js",
+        "firestore": "node firestore.js"
     },
     "dependencies": {
         "request": "^2.88.2",
         "dateformat": "^3.0.3",
-        "axios": "^0.19.2"
+        "axios": "^0.19.2",
+        "firebase-admin": "^8.9.2",
+        "firebase-functions": "^3.3.0"
     }
 }
