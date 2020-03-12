@@ -1,0 +1,15 @@
+{
+    "name": "rest-client",
+    "description": "REST client basic example",
+    "version": "1.0.0",
+    "license": "Apache Version 2.0",
+    "author": "Boni García",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "request": "^2.88.2",
+        "dateformat": "^3.0.3",
+        "axios": "^0.19.2"
+    }
+}
