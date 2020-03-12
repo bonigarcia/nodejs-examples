@@ -1,0 +1,14 @@
+{
+    "name": "firestore",
+    "description": "Firestore example using promises",
+    "version": "1.0.0",
+    "license": "Apache Version 2.0",
+    "author": "Boni García",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "firebase-admin": "^8.9.2",
+        "firebase-functions": "^3.3.0"
+    }
+}
