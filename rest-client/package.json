@@ -9,7 +9,7 @@
     },
     "dependencies": {
         "request": "^2.88.2",
-        "dateformat": "^3.0.3",
+        "dateformat": "^4.1.1",
         "axios": "^0.21.1"
     }
 }
