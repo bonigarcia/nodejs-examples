@@ -7,7 +7,7 @@ This project contains basic examples for Node.js.
 
 ## About
 
-This is a project made by [Boni Garcia], Assistant Professor at [Universidad Carlos III de Madrid]. Copyright &copy; 2020.
+This is a project made by [Boni Garcia], Visiting Professor at [Universidad Carlos III de Madrid]. Copyright &copy; 2020-2021.
 
 [Universidad Carlos III de Madrid]: https://www.it.uc3m.es/bogarcia/index.html
 [Boni Garcia]: http://bonigarcia.github.io/
