@@ -1,9 +1,11 @@
 const admin = require("firebase-admin");
 
-let serviceAccount = require("assistantsample-pblkhd-firebase-adminsdk-ac1rx-d6e074331f.json");
+// FIXME: Go to IAM & admin > Service accounts in the Cloud Platform Consoles
+// (https://console.cloud.google.com/iam-admin/serviceaccounts) and generate
+// a private key and save as as JSON file
+const serviceAccount = require("../uc3m-it-2021-16147-teachers-3dce9f913dbc.json");
 admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://assistantsample-pblkhd.firebaseio.com"
+    credential: admin.credential.cert(serviceAccount)
 });
 
 const db = admin.firestore();
