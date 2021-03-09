@@ -9,7 +9,7 @@ const axios = require("axios").default;
 const dateFormat = require("dateformat");
 const admin = require("firebase-admin");
 
-admin.initializeApp(functions.config().firebase);
+admin.initializeApp();
 const db = admin.firestore();
 
 process.env.DEBUG = "dialogflow:debug"; // enables lib debugging statements
@@ -29,7 +29,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   }
 
   function cardHandler(agent) {
-    agent.add("This message is from Dialogflow's Cloud Functions for Firebase editor!");
+    agent.add("This message is from Dialogflow's Cloud Functions!");
     agent.add(new Card({
       title: "Title: this is a card title",
       imageUrl: "https://developers.google.com/assistant/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
@@ -118,7 +118,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     try {
       // Read data
       // https://firebase.google.com/docs/firestore/query-data/get-data
-      agent.add("List of countries in Firebase");
+      agent.add("List of countries in Firestore");
       let world = await db.collection("world").get();
       world.forEach(doc => {
         agent.add("Country: " + doc.data().country + ", capital: " + doc.data().capital);
@@ -158,4 +158,3 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   intentMap.set("Delete Country", deleteCountryHandler);
   agent.handleRequest(intentMap);
 });
-

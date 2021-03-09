@@ -6,7 +6,7 @@
   "license": "Apache Version 2.0",
   "author": "UC3M",
   "engines": {
-    "node": "8"
+    "node": "10"
   },
   "scripts": {
     "start": "firebase serve --only functions:dialogflowFirebaseFulfillment",
