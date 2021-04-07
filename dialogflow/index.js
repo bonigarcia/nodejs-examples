@@ -1,4 +1,3 @@
-// Fulfillment example developed by UC3M in the context of the Platform for Networked Communities
 "use strict";
 
 const functions = require("firebase-functions");
@@ -16,10 +15,9 @@ process.env.DEBUG = "dialogflow:debug"; // enables lib debugging statements
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
   const agent = new WebhookClient({ request, response });
-  console.log("Dialogflow Request headers", request.headers);
-  console.log("Dialogflow Request body", request.body);
 
   function welcome(agent) {
+    console.log("Welcome handler");
     agent.add("Welcome to PCR-test agent!");
   }
 
